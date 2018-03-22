@@ -1,0 +1,881 @@
+
+:root {
+    max-width: 100%;
+    font-family: Fira Sans,Arial,sans-serif;
+    font-size: 16px;
+    word-spacing: 1px;
+    line-height: 1.5;
+    min-height: 100%;
+    text-size-adjust: 100%;
+ 
+    font-weight: 400;
+    background-color: #f7f7f7;
+    color: #2e2e2e;
+}
+/*****Сброс*****/ 
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, /*strong,*/ sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1,5em;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*Сбрасываем параметры всех тегов*/
+
+  
+
+/*****Базовые элементы*****/ 
+
+/*Определение стилей для тегов: body, h1-h6, ul, ol, a, p и т.п.*/
+
+html {
+            line-height: 1.15;
+        }
+
+  body {   
+            background-color: #fff
+        }
+
+
+.link:active, .link:focus, .link:hover, .link:visited, a:active, a:focus, a:hover, a:visited {
+    text-decoration: none;
+}
+
+  a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/*****Базовое расположение элементов сайта*****/ 
+
+.nuxt-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100vh;
+}
+
+/*Определите расположение элементов сайта: header, footer и т.п.*/
+
+  
+
+/*****Хедер*****/ 
+
+
+/*Определите значения элементов хедера*/
+
+
+
+.header-menu{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-family: Fira Sans,Arial,sans-serif;
+    padding: .25rem 1rem;
+    font-weight: 600;
+    background-color: #6900cc;
+    color: #fff;
+    z-index: 2;
+    list-style-type: none;
+    
+}
+
+.header__section{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.header__item{
+    padding: 10px 15px;
+    font-size: .875rem;
+    margin-left: 5px;
+    line-height: 1.1875rem;
+}
+
+.header__item:hover {
+    /*border: 1px solid;*/
+    background-color: #8400ff;
+    border-radius: 4px;
+}
+
+.headerlogo{
+    font-weight: bold;
+}
+
+.headerButton{
+    cursor: pointer;
+}
+
+.main-nav{
+/*    border: 3px solid #000;*/
+    display: flex;
+    background: #8400ff;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 20%;
+    padding: 5px 16px;
+}
+
+.main-nav__burger{
+    border: 1px solid #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
+
+.the-burger{
+    background: transparent;
+    /*padding: 5px 15px;*/
+    padding: .2rem 2rem .2rem 1rem;
+    outline: none;
+    color: #fff;
+    fill: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    
+}
+
+
+.the-burger:hover{
+    background: #fff;
+    color:#8400ff
+}
+
+/***form search***/
+
+.main-nav__search { 
+    background: transparent;
+    flex: 0.5 1 auto;
+}
+
+form{
+    display: block;
+}
+
+.search {
+  position: relative;
+  max-width: 1000px;
+}
+
+.search-wrap{
+    border: none;
+    position: relative;
+    background: #fff;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.search__input {
+    width: 100%;
+    padding: .5rem 2rem .5rem 1rem;
+    border: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    background: transparent;
+    color: #454545;
+    font-size: .875rem;
+    line-height: 1.1875rem;
+    outline: 0;
+}
+
+.search__btn {
+    position: absolute; 
+    margin-left: -1.5rem;
+    width: 2.25rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.search__btn:before {
+  content: "";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #000;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts__tel{
+   font-size: 1.375rem;
+   line-height: 1.9375rem; 
+}
+
+
+.contacts__working-hours{
+    font-size: .75rem;
+    line-height: .75rem;
+
+}
+
+/*****Содержание*****/ 
+
+.main{
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+     
+}
+
+.row{
+
+     display: flex;
+     flex-direction: column;
+     padding: 30px 60px;
+     box-shadow: 0 4px 2px rgba(0,0,0,.03);
+/*
+    max-width: 960px;
+    min-width: 430px;
+    margin: 0 auto;
+*//*выглядит красиво*/
+ 
+}
+
+.row_banner{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.row_subtitle {
+    max-width: 710px;
+    margin: 1rem auto 2rem;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.button{/**Прочитать про свойства выделенные**/
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    padding: .75rem 1rem;
+    font-size: 1rem;
+    line-height: 1;
+    outline: 0;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    appearance: none;
+    user-select: none;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: .01rem;
+    text-decoration: none;
+    background-color: #8400ff;
+    color: #fff;
+    transition: all .3s ease-out 0s;
+}
+
+
+
+.row-title{
+    /*text-align: center;*/
+    /*margin: 10px auto;*/
+    margin: 0 auto;
+    max-width: 710px;
+    line-height: 2.25rem;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.row-subtitle{
+    /*text-align: center;*/
+    margin: 10px auto;
+    max-width: 710px;
+    margin: 1rem auto 2rem;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.row-product{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+/*
+    max-width: 960px;
+    min-width: 430px;
+*/
+    
+}
+
+/*Описание товара, задаем стили*/
+.wrap-product{
+
+    /* margin: 15px 0px;*/
+
+    position: relative;
+    min-width: 250px;
+    max-width: 250px;
+    width: 100%;     
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    margin-right: 1rem;
+    margin-bottom: .65rem;
+}
+
+.link{
+    color: #2e2e2e;
+}
+
+.link:hover{
+    color: #6900cc;
+}
+
+.product-foto{
+    height: 250px;
+    margin: 0 auto .5rem;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.foto{
+    max-height: 250px;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.product-name{
+    height: 70px;
+    width: 250px;
+    font-size: .8125rem;
+    font-weight: 400;
+    line-height: 17px;
+    overflow: hidden;
+    text-align: center;
+    /*margin: auto;*/
+    box-sizing: border-box;
+}
+
+.product-price{
+     margin-top: 1rem;
+    font-size: .875rem;
+    font-weight: 900;
+    line-height: 19px;
+}
+
+.add-product-btn{
+    display: none;
+    margin-top: 20px;
+}
+
+.add-product-btn{
+    display: block;
+    margin-top: 20px;
+}
+
+/*Завершение описания товара*/
+
+
+.wrap-row-serves{
+    display: flex;
+    justify-content: space-around;
+    flex-basis:430px; 
+}
+
+.row-serves{
+/*
+    border: 5px solid #000;
+    background: #3AE2CE;
+*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    
+
+  
+}
+
+.row-serves-component{
+   padding:0  15px;
+   
+}
+
+.modal{}
+/*Определите значения элементов содержательной части сайта.*/
+
+  
+
+/*****Футер*****/ 
+
+
+/*Определите значения элементов футера*/
+
+.footer{
+/*
+    border: 5px solid #000;
+    background: #9191FF;
+*/
+    background: #2E2E2E;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.footer a{
+    color: #ccc;
+}
+
+.g-container.footer__row{
+    padding: 64px 30px 30px 30px;
+}
+
+.footer__row{
+    display: flex;
+    flex-direction: column;
+    letter-spacing: .1px;
+    padding: 1.875rem ;
+    background-color: #2e2e2e;
+    line-height: 1.5rem;
+    font-size: .875rem; 
+}
+
+.footer__title{
+   text-align: center;
+    line-height: 2.125rem;
+    font-size: 1.75rem;
+    color: #d4d4d4;
+    font-weight: 600;
+    max-width: 565px;
+    margin: 0 auto;
+    
+}
+  
+.footer__subcontent{
+    text-align: center;
+    max-width: 484px;
+    margin: 16px auto 0;
+    color: #ccc;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.footer__contacts{
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.footer__item--with-margin{margin: 16px 20px 0px 20px;
+}
+
+.footer__row {
+    line-height: 1.5rem;
+    font-size: .875rem;
+    letter-spacing: .1px;
+}
+
+
+.footer__row.footer-style{
+    background-color: #292929;
+}
+
+.wrap_footer_info{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footer__info{
+/*
+    border: 3px solid #000CE9;
+    background: #E95A52;
+*/
+    display: flex;
+ 
+}
+
+.footer__info-column{
+/*    border: 5px solid #000;*/
+    /*background: #5763E9;*/
+    margin: 5px 15px;
+}
+
+
+.footer__social{
+    display: flex;
+}
+
+.footer__social-item{
+    padding: 0 15px;
+}
+
+.footer__copyright{
+    color: #999;
+    font-size: 0.8rem;
+    margin-top: 32px;
+}
+
+
+.link--inverse, a--inverse {
+    color: #999;
+}
+.link--inverse {
+    color: #999;
+}
+
+
+/*****и т.д.*****/ 
+
+/*Определите значения элементов для других частей сайта*/
+
+/***CATALOG STYLE***/
+
+.product-name-catalog{
+    height: 70px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.0625rem;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+
+.wrap-product.catalog{
+
+    /* margin: 15px 0px;*/
+
+    position: relative;
+    min-width: 230px;
+    max-width: 230px;
+    width: 100%;     
+}
+
+
+/***THE END CATALOG STYLE***/
+
+
+
+/*****
+SECTION DELIVERY
+****/
+
+.achievements{
+   display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+
+.achievements-num{
+    color: #8400ff;
+    font-size: 2rem;
+}
+
+.callus-form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.btn-pickup{
+    padding: 1.125rem;
+    margin-left: 1rem;
+}
+
+.cost_delivery_header {
+    border-bottom: 1px solid #e8e8e8;
+    transition: all .2s ease-in-out;
+    outline: 0;
+    cursor: pointer;
+}
+
+.cost_delivery{
+    padding: 0;
+}
+
+.cost_delivery_button{
+    background: none;
+    border: 1px solid #8400ff ;
+    border-radius: 3px;
+    text-align: left;
+    width: 100%;
+    padding: .7rem .5rem;
+    cursor: pointer;
+    font-size: 100%;
+}
+
+.table-menu {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.table-menu__header {
+    color: #999;
+}
+
+.table-menu__field{
+    padding: .5rem;
+    font-weight: 400;
+    border-bottom: 1px solid #e8e8e8;
+    text-align: left;
+}
+
+.tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -.5em;
+}
+
+
+/*****
+THE END SECTION DELIVERY
+****/
+
+
+
+/*****
+SECTION PAYMENT
+****/
+
+.container-content{
+    flex:0 1 auto;
+}
+
+.page{
+    display:flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    box-sizing: border-box;
+}
+
+/**Sidebar**/
+
+
+.page-sidebar{
+    order:1;
+    padding: 15px 30px;
+    flex-basis: auto;
+    box-sizing: border-box;
+}
+
+.sidebar-menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-menu_items{
+   list-style: none;
+    padding-left: 0; 
+}
+
+.sidebar-menu_item{
+    display: flex;
+}
+
+.sidebar-menu_link{
+    width: 100%;
+    font-weight: 500;
+    padding: .5rem 0;
+    border-bottom: 1px solid #e8e8e8;
+    transition: all .2s ease-in-out; 
+}
+/**The end Sidebar**/
+
+
+.page-main{
+    display: flex;
+    flex-direction: column;
+    max-width:70%;
+/*    min-width: 30%*/
+    flex-basis: auto;
+    margin-bottom: 3rem;
+}
+
+.page-row{
+        margin-top: 4rem;
+}
+
+.page-title{
+    
+/*    margin: 0;*/
+    line-height: 2.25rem;
+    font-size: 1rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #999;
+}
+
+.page-subtitle{
+    font-size: 2rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    
+}
+
+.page-text{
+   margin-top: 1rem; 
+}
+
+.change-text{color: #949494;}
+
+/*****
+THE END SECTION PAYMENT
+****/
+
+
+/*****
+SECTION RETURN
+****/
+.page-title.between{
+    margin-bottom: 4rem;
+}
+
+/*****
+THE END SECTION RETURN
+****/
+
+
+/*****
+SECTION CONTACTS
+****/
+
+.call{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 16px;
+    background-color: rgba(155,82,224,.09);
+}
+
+.field{
+    position: relative;
+    border: none;
+    padding: 0;
+}
+
+.input{ position: relative;}
+
+.input-input{
+    width: 100%;
+    border-radius: 3px;
+    height: 3.125rem;
+    font-size: 1rem;
+    line-height: 2rem;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.call-btn {
+    margin-top: 1rem;
+}
+
+.button.call-btn:hover {
+    opacity: .4;
+}
+
+
+.change-text.call-text{
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/*****
+THE END SECTION CONTACTS
+****/
